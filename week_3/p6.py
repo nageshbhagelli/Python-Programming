@@ -1,28 +1,20 @@
-#5. Write a Python program where different classes (Car, Bike, Truck) have the same method
-# start_engine(), demonstrating polymorphism.
+# 6. Write a Python program that uses operator overloading to add two Vector objects using the + operator.
 
-class Car:
-    def start_engine(self):
-        return "Car engine started with a roar!"
-
-class Bike:
-    def start_engine(self):
-        return "Bike engine started with a vroom!"
-
-class Truck:
-    def start_engine(self):
-        return "Truck engine started with a heavy rumble!"
-
-# Function demonstrating polymorphism
-def start_vehicle_engine(vehicle):
-    print(vehicle.start_engine())
-
-# Creating objects of Car, Bike, and Truck
-car = Car()
-bike = Bike()
-truck = Truck()
-
-# Demonstrating polymorphism
-start_vehicle_engine(car)
-start_vehicle_engine(bike)
-start_vehicle_engine(truck)
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __add__(self, other):
+        if isinstance(other, Vector):
+            return Vector(self.x + other.x, self.y + other.y)
+        raise TypeError("Operand must be an instance of Vector")
+    
+    def __str__(self):
+        return f"Vector({self.x}, {self.y})"
+    
+# Example usage
+v1 = Vector(2, 3)
+v2 = Vector(4, 5)
+v3 = v1 + v2  # Uses operator overloading
+print(v3)  # Output: Vector(6, 8)

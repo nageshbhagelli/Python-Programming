@@ -1,46 +1,44 @@
-# 8. Create a class Laptop with private attributes for price and model, and public methods to
-# access and modify them safely.
+# 10. Write a Python program that demonstrates abstraction using an interface (abstract class) for
+# different payment methods like CreditCard, PayPal, and Bitcoin.
 
-class Laptop:
-    def __init__(self, model, price):
-        self.__model = model  # Private attribute
-        self.__price = price  # Private attribute
+from abc import ABC, abstractmethod
 
-    # Getter method for model
-    def get_model(self):
-        return self.__model
+# Abstract class (interface)
+class Payment(ABC):
+    @abstractmethod
+    def pay(self, amount):
+        pass  # Abstract method to be implemented by subclasses
 
-    # Setter method for model
-    def set_model(self, model):
-        if isinstance(model, str) and model.strip():
-            self.__model = model
-        else:
-            print("Invalid model name.")
+# CreditCard class implementing Payment interface
+class CreditCard(Payment):
+    def __init__(self, card_number):
+        self.card_number = card_number
 
-    # Getter method for price
-    def get_price(self):
-        return self.__price
+    def pay(self, amount):
+        print(f"Paid ${amount} using Credit Card (Card Number: {self.card_number[-4:]})")
 
-    # Setter method for price
-    def set_price(self, price):
-        if price > 0:
-            self.__price = price
-        else:
-            print("Price must be a positive value.")
+# PayPal class implementing Payment interface
+class PayPal(Payment):
+    def __init__(self, email):
+        self.email = email
+
+    def pay(self, amount):
+        print(f"Paid ${amount} using PayPal (Email: {self.email})")
+
+# Bitcoin class implementing Payment interface
+class Bitcoin(Payment):
+    def __init__(self, wallet_address):
+        self.wallet_address = wallet_address
+
+    def pay(self, amount):
+        print(f"Paid ${amount} using Bitcoin (Wallet: {self.wallet_address[:6]}...{self.wallet_address[-6:]})")
 
 # Example usage
-laptop = Laptop("Dell XPS 15", 1500)
+payment1 = CreditCard("1234567812345678")
+payment1.pay(100)
 
-# Accessing private attributes using getters
-print("Model:", laptop.get_model())
-print("Price: $", laptop.get_price())
+payment2 = PayPal("user@example.com")
+payment2.pay(200)
 
-# Modifying private attributes using setters
-laptop.set_model("MacBook Pro")
-laptop.set_price(2000)
-
-print("Updated Model:", laptop.get_model())
-print("Updated Price: $", laptop.get_price())
-
-# Attempting direct access to private attributes (will cause an error)
-# print(laptop.__model)  # Uncommenting this line will raise an AttribteError
+payment3 = Bitcoin("1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa")
+payment3.pay(500)

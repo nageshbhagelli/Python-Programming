@@ -1,13 +1,11 @@
-#2. b. Write a Python program that prompts the user for an integer input and handles the case where the input is not an integer.
+#3. Write a Python program to find all words in a given string that start with a vowel using regex.
 
-def get_integer():
-    while True:
-        try:
-            num = int(input("Enter an integer: "))
-            print("You entered:", num)
-            break
-        except ValueError:
-            print("Invalid input. Please enter an integer.")
+import re
+
+def find_vowel_words(text):
+    words = re.findall(r"\b[aeiouAEIOU]\w*", text)
+    return words
 
 # Example usage
-get_integer()
+text = input("Enter a string: ")
+print("Words starting with vowels:", find_vowel_words(text))

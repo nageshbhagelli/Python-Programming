@@ -14,7 +14,7 @@ class EvenNumbers:
             raise StopIteration
         return self.num
 
-# Example usage
+# Example usage 
 limit = int(input("Enter limit: "))
 even_numbers = EvenNumbers(limit)
 for num in even_numbers:

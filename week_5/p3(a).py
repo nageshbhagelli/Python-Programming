@@ -1,7 +1,7 @@
 # 3.a Copy File Contents:
 # Write a Python program that reads a file and writes its contents to another file.
 
-source_file = "source.txt"
+source_file = "week_5/source.txt"
 destination_file = "copy.txt"
 
 try:

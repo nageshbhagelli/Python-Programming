@@ -1,7 +1,7 @@
 # 3.b Count Words in a File:
 # Write a Python program that reads a file and counts the number of words in it.
 
-filename = "source.txt"
+filename = "week_5/source.txt"
 
 try:
     with open(filename, "r") as file:

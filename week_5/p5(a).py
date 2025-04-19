@@ -3,7 +3,7 @@
 
 import csv
 
-filename = "data.csv"
+filename = "week_5/data.csv"
 
 try:
     with open(filename, newline='') as csvfile:

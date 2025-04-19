@@ -1,7 +1,7 @@
 # 4.a Reading a File in Binary Mode:
 # Write a Python program that reads an image or binary file in binary mode and prints its first 100 bytes.
 
-filename = "image.jfif"
+filename = "week_5/python.jpeg"
 
 try:
     with open(filename, "rb") as file:

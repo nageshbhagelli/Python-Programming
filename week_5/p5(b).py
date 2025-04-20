@@ -9,7 +9,7 @@ data = [
     {"Name": "Charlie", "Age": 35, "City": "Chicago"}
 ]
 
-filename = "output.csv"
+filename = "Week_5/output.csv"
 
 with open(filename, "w", newline='') as csvfile:
     fieldnames = ["Name", "Age", "City"]

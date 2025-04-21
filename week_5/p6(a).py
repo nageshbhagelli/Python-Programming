@@ -3,7 +3,7 @@
 
 import json
 
-filename = "data.json"
+filename = "Week_5/data.json"
 
 try:
     with open(filename, "r") as jsonfile:

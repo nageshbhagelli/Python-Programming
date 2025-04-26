@@ -1,0 +1,1 @@
+#2. How would you calculate the percentage of a student if the total marks are 500 and the student scored 375?

@@ -1,3 +1,5 @@
+#6. How do you add two matrices of the same size using NumPy? Provide an example with 2x2 matrices.
+
 import numpy as np
 
 matrix_1  = np.array([[2, 3], [4, 5]])

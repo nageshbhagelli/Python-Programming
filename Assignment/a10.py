@@ -1,0 +1,1 @@
+#10. Write a program to calculate the difference between the highest and lowest values in each list.

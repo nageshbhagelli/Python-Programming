@@ -1,0 +1,1 @@
+# 12. Write a Python function that multiplies two matrices using NumPy.

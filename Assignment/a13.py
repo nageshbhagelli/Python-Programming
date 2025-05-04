@@ -1,5 +1,8 @@
 # 13. Simulate a high-low game where the player guesses whether the next number will be higher or lower. Track the score.
 
+
+import random
+
 def high_low_game():
     score = 0
     current_number = random.randint(1, 100)

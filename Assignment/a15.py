@@ -1,0 +1,1 @@
+# 15. Write a Python function that finds the second highest and second lowest number in a list.

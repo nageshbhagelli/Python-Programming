@@ -1,0 +1,1 @@
+# 16. Write Python code to compute the sum of the diagonal elements of a square matrix.

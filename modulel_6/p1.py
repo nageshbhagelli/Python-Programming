@@ -1,0 +1,1 @@
+# 1. Write a Python program to create a NumPy array of 5 zeros and another array of 5 ones.

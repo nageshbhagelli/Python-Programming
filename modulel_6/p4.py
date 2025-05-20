@@ -1,0 +1,1 @@
+# 4. Write a Python program to split a NumPy array into three equal-sized subarrays.

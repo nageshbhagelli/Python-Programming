@@ -3,4 +3,4 @@
 import numpy as np
 data = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 even_numbers = data[data % 2 == 0]
-print("\n5. Even numbers:", even_numbers)
+print("\nEven numbers:", even_numbers)

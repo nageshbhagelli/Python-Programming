@@ -3,4 +3,4 @@
 import numpy as np
 array_with_negatives = np.array([-3, -1, 0, 2, -5, 6])
 array_with_negatives[array_with_negatives < 0] = 0
-print("\n6. Replaced negatives with zero:", array_with_negatives)
+print("\nReplaced negatives with zero:", array_with_negatives)

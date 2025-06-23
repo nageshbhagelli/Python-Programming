@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 8.1 Determine the number of unique orders using the `order_id` column.
-chipotle = pd.read_csv('chipotle.csv') # 8.1
+chipotle = pd.read_csv('module_8/chipotle.csv') # 8.1
 print("Unique orders:", chipotle['order_id'].nunique())
 
 # 8.2 Calculate the average revenue per order.

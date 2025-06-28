@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the dataset
-df = pd.read_csv("Student_Dataset.csv")
+df = pd.read_csv("module_10/Student_Dataset.csv")
 
 # i. Convert columns to category dtype
 df['Department'] = df['Department'].astype('category')
